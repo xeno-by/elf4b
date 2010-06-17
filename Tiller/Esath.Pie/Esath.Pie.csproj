@@ -74,6 +74,10 @@
     <Compile Include="Helpers\ElfUtils.cs" />
     <Compile Include="Helpers\PieType.cs" />
     <Compile Include="Helpers\WinFormsUtils.cs" />
+    <Compile Include="Properties\AssemblyBuiltAtAttribute.cs" />
+    <Compile Include="Properties\AssemblyBuiltByAttribute.cs" />
+    <Compile Include="Properties\AssemblyBuiltFromAttribute.cs" />
+    <Compile Include="Properties\AssemblyBuiltOnAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ElfEditor.resx">
       <DependentUpon>ElfEditor.cs</DependentUpon>
@@ -123,7 +127,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>echo Synchronize assembly revision number with SVN revision
-"$(ProjectDir)..\..\ThirdPartyStuff\tortoiseSVN\subwcrev.bat" "$(ProjectDir)." "$(ProjectDir)Properties\AssemblyInfo.template" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+    <PreBuildEvent>"$(ProjectDir)..\..\ThirdPartyStuff\autoversioner\AutoVersioner.exe" "$(ProjectDir)$(ProjectFileName)" "$(ProjectDir)Properties\AssemblyInfo.template" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
   </PropertyGroup>
 </Project>

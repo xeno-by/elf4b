@@ -2,15 +2,23 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Elf.Core.ClrIntegration;
+using Esath.Pie.Properties;
 
-[assembly: AssemblyTitle("Esath.Pie")]
-[assembly: AssemblyProduct("Browser")]
+[assembly: AssemblyProduct("Esath Browser")]
+[assembly: AssemblyTitle("Esath.Pie (" +
+    "built from $"CODEBASE"$ (rev=$REVISION$, hash=$CODEHASH$), " +
+    "built at $TIMESTAMP$, " +
+    "built by $USERHASH$, " +
+    "built on $MACHINEHASH$)")]
 [assembly: AssemblyCopyright("Copyright © 2008-2010 БелНИЦзем")]
 
 [assembly: ComVisible(false)]
 [assembly: InternalsVisibleTo("Esath.Playground")]
 [assembly: ElfDiscoverable]
 
-[assembly: Guid("daa2bfd4-c29d-4e71-a044-5332365d78ac")]
-[assembly: AssemblyVersion("1.0.$WCREV$.0")]
-[assembly: AssemblyFileVersion("1.0.$WCREV$.0")]
+[assembly: Guid("d25ccdd0-2be2-3598-b7d6-d5cf7aa5ddf5")]
+[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyBuiltFrom(Repository = "$"CODEBASE"$", Revision = "$REVISION$", CodebaseHash = "$CODEHASH$")]
+[assembly: AssemblyBuiltAt(Timestamp = "$TIMESTAMP$")]
+[assembly: AssemblyBuiltBy(UserHash = "$USERHASH$")]
+[assembly: AssemblyBuiltOn(MachineHash = "$MACHINEHASH$")]

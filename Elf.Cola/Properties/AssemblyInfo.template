@@ -2,15 +2,23 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Elf.Core.ClrIntegration;
+using Elf.Cola.Properties;
 
-[assembly: AssemblyTitle("Elf.Cola")]
 [assembly: AssemblyProduct("Elf")]
-[assembly: AssemblyCopyright("Copyright © 2008-2010 ObjectMeet")]
+[assembly: AssemblyTitle("Elf.Cola (" +
+    "built from $"CODEBASE"$ (rev=$REVISION$, hash=$CODEHASH$), " +
+    "built at $TIMESTAMP$, " +
+    "built by $USERHASH$, " +
+    "built on $MACHINEHASH$)")]
+[assembly: AssemblyCopyright("Copyright © 2009-2010 ObjectMeet")]
 
 [assembly: ComVisible(false)]
 [assembly: InternalsVisibleTo("Elf.Playground")]
 [assembly: ElfDiscoverable]
 
 [assembly: Guid("36d3313d-7b0f-4698-a579-ef44070256ca")]
-[assembly: AssemblyVersion("1.0.$WCREV$.0")]
-[assembly: AssemblyFileVersion("1.0.$WCREV$.0")]
+[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyBuiltFrom(Repository = "$"CODEBASE"$", Revision = "$REVISION$", CodebaseHash = "$CODEHASH$")]
+[assembly: AssemblyBuiltAt(Timestamp = "$TIMESTAMP$")]
+[assembly: AssemblyBuiltBy(UserHash = "$USERHASH$")]
+[assembly: AssemblyBuiltOn(MachineHash = "$MACHINEHASH$")]
