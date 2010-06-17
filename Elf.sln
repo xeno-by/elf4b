@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf", "Elf\Elf.csproj", "{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.Playground", "Elf.Playground\Elf.Playground.csproj", "{E2BAE19F-B53C-4E30-A14E-757ADF3E964B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.Cola", "Elf.Cola\Elf.Cola.csproj", "{23678C99-7552-4DCD-BE0E-AC02E438778C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BAE19F-B53C-4E30-A14E-757ADF3E964B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BAE19F-B53C-4E30-A14E-757ADF3E964B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BAE19F-B53C-4E30-A14E-757ADF3E964B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BAE19F-B53C-4E30-A14E-757ADF3E964B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23678C99-7552-4DCD-BE0E-AC02E438778C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23678C99-7552-4DCD-BE0E-AC02E438778C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23678C99-7552-4DCD-BE0E-AC02E438778C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23678C99-7552-4DCD-BE0E-AC02E438778C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

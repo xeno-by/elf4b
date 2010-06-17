@@ -1,0 +1,111 @@
+﻿01: def Script rtimpl ToyScript
+02:   /* multi-line comment
+03:   def Acquire (url) rtimpl
+04:   def Store (what, url) rtimpl
+05: 
+06:   */ def Fun (a)
+07:     ret (a * 2 + 3)
+08:   end
+09: 
+10:   def Main ()
+11:     var z, x = 2
+12:     if Fun(x) > 7 && Fun(x + 1) < 10 then
+13:       var y = x = Datum.Input.1 // and another comment
+14:       x = x + y * Datum.Repository.4 + z
+15:       Datum.Output.1 = x - 2 * y
+16:     else
+17:       var y = Datum.Input.2
+18:       z = 0 // this line is necessary or we face a UsingVoidValue exception
+19:       Datum.Results.1 = (x + z) + y
+20:     end
+21:   end
+22: end
+
+1:4 (frg: Scr) -> Script
+1:18 (frg: Toy) -> ToyScript
+1:11 (frg: rti) -> (rtimpl ToyScript)
+1:4 (frg: Scr) -> (DECL Script (rtimpl ToyScript))
+6:9 (frg: Fun) -> Fun
+6:14 (frg: a)) -> a
+6:14 (frg: a)) -> (ARGS a)
+6:9 (frg: Fun) -> (DECL Fun (ARGS a))
+7:9 (frg: a *) -> a
+7:13 (frg: 2 +) -> 2
+7:11 (frg: * 2) -> (* a 2)
+7:17 (frg: 3)) -> 3
+7:15 (frg: + 3) -> (+ (* a 2) 3)
+7:8 (frg: (a ) -> (PAREXPR (+ (* a 2) 3))
+7:4 (frg: ret) -> (ret (PAREXPR (+ (* a 2) 3)))
+7:4 (frg: ret) -> (BLOCK (ret (PAREXPR (+ (* a 2) 3))))
+6:9 (frg: Fun) -> (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3)))))
+10:6 (frg: Mai) -> Main
+0:0 (frg: ???) -> ARGS
+10:6 (frg: Mai) -> (DECL Main ARGS)
+11:8 (frg: z, ) -> z
+11:11 (frg: x =) -> x
+11:15 (frg: 2) -> 2
+11:13 (frg: = 2) -> (= x 2)
+11:4 (frg: var) -> (var z (= x 2))
+12:7 (frg: Fun) -> Fun
+12:11 (frg: x) ) -> x
+12:11 (frg: x) ) -> (ARGS x)
+12:7 (frg: Fun) -> (CALL Fun (ARGS x))
+12:16 (frg: 7 &) -> 7
+12:14 (frg: > 7) -> (> (CALL Fun (ARGS x)) 7)
+12:21 (frg: Fun) -> Fun
+12:25 (frg: x +) -> x
+12:29 (frg: 1) ) -> 1
+12:27 (frg: + 1) -> (+ x 1)
+12:27 (frg: + 1) -> (ARGS (+ x 1))
+12:21 (frg: Fun) -> (CALL Fun (ARGS (+ x 1)))
+12:34 (frg: 10 ) -> 10
+12:32 (frg: < 1) -> (< (CALL Fun (ARGS (+ x 1))) 10)
+12:18 (frg: && ) -> (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10))
+13:10 (frg: y =) -> y
+13:14 (frg: x =) -> x
+13:18 (frg: Dat) -> Datum.Input.1
+13:16 (frg: = D) -> (= x Datum.Input.1)
+13:12 (frg: = x) -> (= y (= x Datum.Input.1))
+13:6 (frg: var) -> (var (= y (= x Datum.Input.1)))
+14:6 (frg: x =) -> x
+14:10 (frg: x +) -> x
+14:14 (frg: y *) -> y
+14:18 (frg: Dat) -> Datum.Repository.4
+14:16 (frg: * D) -> (* y Datum.Repository.4)
+14:12 (frg: + y) -> (+ x (* y Datum.Repository.4))
+14:39 (frg: z) -> z
+14:37 (frg: + z) -> (+ (+ x (* y Datum.Repository.4)) z)
+14:8 (frg: = x) -> (= x (+ (+ x (* y Datum.Repository.4)) z))
+14:8 (frg: = x) -> (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z)))
+15:6 (frg: Dat) -> Datum.Output.1
+15:23 (frg: x -) -> x
+15:27 (frg: 2 *) -> 2
+15:31 (frg: y) -> y
+15:29 (frg: * y) -> (* 2 y)
+15:25 (frg: - 2) -> (- x (* 2 y))
+15:21 (frg: = x) -> (= Datum.Output.1 (- x (* 2 y)))
+15:21 (frg: = x) -> (EXPR (= Datum.Output.1 (- x (* 2 y))))
+13:6 (frg: var) -> (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y)))))
+17:10 (frg: y =) -> y
+17:14 (frg: Dat) -> Datum.Input.2
+17:12 (frg: = D) -> (= y Datum.Input.2)
+17:6 (frg: var) -> (var (= y Datum.Input.2))
+18:6 (frg: z =) -> z
+18:10 (frg: 0 /) -> 0
+18:8 (frg: = 0) -> (= z 0)
+18:8 (frg: = 0) -> (EXPR (= z 0))
+19:6 (frg: Dat) -> Datum.Results.1
+19:25 (frg: x +) -> x
+19:29 (frg: z) ) -> z
+19:27 (frg: + z) -> (+ x z)
+19:24 (frg: (x ) -> (PAREXPR (+ x z))
+19:34 (frg: y) -> y
+19:32 (frg: + y) -> (+ (PAREXPR (+ x z)) y)
+19:22 (frg: = () -> (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))
+19:22 (frg: = () -> (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))
+17:6 (frg: var) -> (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))
+12:4 (frg: if ) -> (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))
+11:4 (frg: var) -> (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))))
+10:6 (frg: Mai) -> (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))))
+1:4 (frg: Scr) -> (CLASS (DECL Script (rtimpl ToyScript)) (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3))))) (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))))))
+1:4 (frg: Scr) -> (SCRIPT (CLASS (DECL Script (rtimpl ToyScript)) (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3))))) (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))))))

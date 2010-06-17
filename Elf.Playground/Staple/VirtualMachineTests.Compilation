@@ -1,0 +1,70 @@
+﻿enter
+decl z
+decl x
+push 2
+dup
+pop x
+pop
+push x
+invoke1 Fun
+push 7
+invoke2 >
+push x
+push 1
+invoke2 +
+invoke1 Fun
+push 10
+invoke2 <
+invoke2 &&
+jf if0f
+label if0t
+enter
+decl y
+push Datum.Input.1
+dup
+pop x
+dup
+pop y
+pop
+push x
+push y
+push Datum.Repository.4
+invoke2 *
+invoke2 +
+push z
+invoke2 +
+dup
+pop x
+pop
+push x
+push 2
+push y
+invoke2 *
+invoke2 -
+dup
+pop Datum.Output.1
+pop
+leave
+label if0f
+enter
+decl y
+push Datum.Input.2
+dup
+pop y
+pop
+push 0
+dup
+pop z
+pop
+push x
+push z
+invoke2 +
+push y
+invoke2 +
+dup
+pop Datum.Results.1
+pop
+leave
+leave
+popa
+ret

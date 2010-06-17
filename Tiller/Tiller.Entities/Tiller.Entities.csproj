@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A3D9019-8FFC-4AB8-8A42-680CE500F394}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObjectMeet.Tiller.Entities</RootNamespace>
+    <AssemblyName>Tiller.Entities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>Client</TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataVault, Version=2.6.297.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\datavault\DataVault.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\IDeclaration.cs" />
+    <Compile Include="Api\IFormulaDeclaration.cs" />
+    <Compile Include="Api\ISourceDatumDeclaration.cs" />
+    <Compile Include="Api\ITillerEntity.cs" />
+    <Compile Include="Api\NodeChangeVariant.cs" />
+    <Compile Include="Api\ScenarioEventArgs.cs" />
+    <Compile Include="Api\ScenarioNodeVariation.cs" />
+    <Compile Include="Api\LogicalTopicType.cs" />
+    <Compile Include="BusinessRuleViolationException.cs" />
+    <Compile Include="Entitor.cs" />
+    <Compile Include="Legacy\V100\ConditionDeclaration.cs" />
+    <Compile Include="Legacy\V100\FormulaDeclaration.cs" />
+    <Compile Include="Legacy\V100\ScenarioDepot.cs" />
+    <Compile Include="Legacy\V100\ScenarioNode.cs" />
+    <Compile Include="Legacy\V100\ScenarioNodeType.cs" />
+    <Compile Include="Legacy\V100\SourceValueDeclaration.cs" />
+    <Compile Include="Manifest.cs" />
+    <Compile Include="Pocso\FormulaDeclaration.cs" />
+    <Compile Include="Api\IScenarioNode.cs" />
+    <Compile Include="Api\IStorageUnit.cs" />
+    <Compile Include="Api\IScenario.cs" />
+    <Compile Include="Pocso\Scenario.cs" />
+    <Compile Include="Pocso\ScenarioNode.cs" />
+    <Compile Include="Pocso\SourceDatumDeclaration.cs" />
+    <Compile Include="Pocso\TillerEntityBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Versioning\ConvertorV1000V2000.cs" />
+    <Compile Include="Service\IInteractionProvider.cs" />
+    <Compile Include="Api\IScenarioService.cs" />
+    <Compile Include="Api\IModelConverter.cs" />
+    <Compile Include="Whit\DefaultImplementationAttribute.cs" />
+    <Compile Include="Whit\IamTooCreature.cs" />
+    <Compile Include="Whit\PropertySignature.cs" />
+    <Compile Include="Whit\Traits\FileInfoTrait.cs" />
+    <Compile Include="Whit\Traits\MethodBuilderTrait.cs" />
+    <Compile Include="Whit\Traits\MethodInfoTrait.cs" />
+    <Compile Include="Whit\Traits\ObjectTrait.cs" />
+    <Compile Include="Whit\Traits\InteractionProviderTrait.cs" />
+    <Compile Include="Service\ModelConvertationService.cs" />
+    <Compile Include="Service\ScenarioService.cs" />
+    <Compile Include="Whit\Internal\ICreature.cs" />
+    <Compile Include="Whit\Traits\CustomAttributeProviderTrait.cs" />
+    <Compile Include="Whit\Traits\ILTrait.cs" />
+    <Compile Include="Whit\Internal\FromLambda.cs" />
+    <Compile Include="Whit\Traits\TypeTrait.cs" />
+    <Compile Include="Whit\MetaInfoAttribute.cs" />
+    <Compile Include="Whit\Internal\TypeBuildingContext.cs" />
+    <Compile Include="Whit\Internal\MetaProperty.cs" />
+    <Compile Include="Whit\Traits\TypeBuilderTrait.cs" />
+    <Compile Include="Whit\Traits\PropertyInfoTrait.cs" />
+    <Compile Include="Whit\Traits\StringTrait.cs" />
+    <Compile Include="Whit\Traits\VersionTrait.cs" />
+    <Compile Include="Whit\VaultWhit.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,250 @@
+﻿********** Loaded classes **********
+
+CocaScriptHost (rtimpl: , clr: Elf.Cola.CocaScriptHost, sr: Elf.Cola.NameResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method CocaScriptHost()
+    Void .ctor()
+  end
+end
+
+ElfBoolean (rtimpl: , clr: Elf.Core.TypeSystem.ElfBoolean, sr: Elf.Core.Runtime.Impl.DefaultScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method !=(o1, o2)
+    Boolean op_Inequality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method &&(b1, b2)
+    Boolean op_BitwiseAnd(Elf.Core.TypeSystem.ElfBoolean, Elf.Core.TypeSystem.ElfBoolean)
+  end
+
+  method ||(b1, b2)
+    Boolean op_BitwiseOr(Elf.Core.TypeSystem.ElfBoolean, Elf.Core.TypeSystem.ElfBoolean)
+  end
+
+  method ==(o1, o2)
+    Boolean op_Equality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+end
+
+ElfInteractiveScript (rtimpl: , clr: Elf.Interactive.ElfInteractiveScript, sr: Elf.Interactive.ElfInteractiveScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method ElfInteractiveScript()
+    Void .ctor()
+  end
+end
+
+ElfNumber (rtimpl: , clr: Elf.Core.TypeSystem.ElfNumber, sr: Elf.Core.Runtime.Impl.DefaultScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method -(n1, n2)
+    Elf.Core.TypeSystem.ElfNumber op_Subtraction(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method !=(o1, o2)
+    Boolean op_Inequality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method *(n1, n2)
+    Elf.Core.TypeSystem.ElfNumber op_Multiply(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method /(n1, n2)
+    Elf.Core.TypeSystem.ElfNumber op_Division(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method ^(n1, n2)
+    Elf.Core.TypeSystem.ElfNumber op_ExclusiveOr(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method +(n1, n2)
+    Elf.Core.TypeSystem.ElfNumber op_Addition(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method <(n1, n2)
+    Elf.Core.TypeSystem.ElfBoolean op_LessThan(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method <=(n1, n2)
+    Elf.Core.TypeSystem.ElfBoolean op_LessThanOrEqual(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method ==(o1, o2)
+    Boolean op_Equality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method >(n1, n2)
+    Elf.Core.TypeSystem.ElfBoolean op_GreaterThan(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+
+  method >=(n1, n2)
+    Elf.Core.TypeSystem.ElfBoolean op_GreaterThanOrEqual(Elf.Core.TypeSystem.ElfNumber, Elf.Core.TypeSystem.ElfNumber)
+  end
+end
+
+ElfString (rtimpl: , clr: Elf.Core.TypeSystem.ElfString, sr: Elf.Core.Runtime.Impl.DefaultScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method !=(o1, o2)
+    Boolean op_Inequality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method ==(o1, o2)
+    Boolean op_Equality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+end
+
+LightSyntaxHost (rtimpl: , clr: Elf.Syntax.Light.LightSyntaxHost, sr: Elf.Core.Runtime.Impl.DefaultScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method LightSyntaxHost()
+    Void .ctor()
+  end
+end
+
+Script (rtimpl: ToyScript, clr: Elf.Playground.ToyScript.ToyScript, sr: Elf.Playground.ToyScript.ToyScriptScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method !=(o1, o2)
+    Boolean op_Inequality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method ==(o1, o2)
+    Boolean op_Equality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method Script()
+    Void .ctor()
+  end
+
+  method Fun(a)
+    <source code>
+    1: def Fun (a)
+    2:   ret (a * 2 + 3)
+    3: end
+
+    <disassembly>
+    00: enter
+    01: popa
+    02: push a
+    03: push 2
+    04: invoke2 *
+    05: push 3
+    06: invoke2 +
+    07: ret
+    08: leave
+    09: popa
+    10: ret
+  end
+
+  method Main()
+    <source code>
+    01: def Main ()
+    02:   var z, x = 2
+    03:   if Fun(x) > 7 && Fun(x + 1) < 10 then
+    04:     var y = x = Datum.Input.1 // and another comment
+    05:     x = x + y * Datum.Repository.4 + z
+    06:     Datum.Output.1 = x - 2 * y
+    07:   else
+    08:     var y = Datum.Input.2
+    09:     z = 0 // this line is necessary or we face a UsingVoidValue exception
+    10:     Datum.Results.1 = (x + z) + y
+    11:   end
+    12: end
+
+    <disassembly>
+    00: enter
+    01: decl z
+    02: decl x
+    03: push 2
+    04: dup
+    05: pop x
+    06: pop
+    07: push x
+    08: invoke1 Fun
+    09: push 7
+    10: invoke2 >
+    11: push x
+    12: push 1
+    13: invoke2 +
+    14: invoke1 Fun
+    15: push 10
+    16: invoke2 <
+    17: invoke2 &&
+    18: jf if0f
+    19: label if0t
+    20: enter
+    21: decl y
+    22: push Datum.Input.1
+    23: dup
+    24: pop x
+    25: dup
+    26: pop y
+    27: pop
+    28: push x
+    29: push y
+    30: push Datum.Repository.4
+    31: invoke2 *
+    32: invoke2 +
+    33: push z
+    34: invoke2 +
+    35: dup
+    36: pop x
+    37: pop
+    38: push x
+    39: push 2
+    40: push y
+    41: invoke2 *
+    42: invoke2 -
+    43: dup
+    44: pop Datum.Output.1
+    45: pop
+    46: leave
+    47: label if0f
+    48: enter
+    49: decl y
+    50: push Datum.Input.2
+    51: dup
+    52: pop y
+    53: pop
+    54: push 0
+    55: dup
+    56: pop z
+    57: pop
+    58: push x
+    59: push z
+    60: invoke2 +
+    61: push y
+    62: invoke2 +
+    63: dup
+    64: pop Datum.Results.1
+    65: pop
+    66: leave
+    67: leave
+    68: popa
+    69: ret
+  end
+end
+
+ToyScript (rtimpl: , clr: Elf.Playground.ToyScript.ToyScript, sr: Elf.Playground.ToyScript.ToyScriptScopeResolver, ir: Elf.Core.Runtime.Impl.DefaultInvocationResolver)
+  method !=(o1, o2)
+    Boolean op_Inequality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method ==(o1, o2)
+    Boolean op_Equality(Elf.Core.TypeSystem.ElfObjectImpl, Elf.Core.TypeSystem.ElfObjectImpl)
+  end
+
+  method ToyScript()
+    Void .ctor()
+  end
+end
+
+********** Threads **********
+
+Managed thread
+Status = Running
+Entrypoint =
+  Main() native, declared by Script
+  This = <Elf.Playground.ToyScript.ToyScript>, Args = ()
+
+Pending CLR call = 
+Native stack trace =
+  Fun(this = <Elf.Playground.ToyScript.ToyScript>, a = <2>), current = 4 (invoke2 *)
+    stack = <2>, <2>
+    scopes = 
+      <empty>
+      <call context>
+  Main(this = <Elf.Playground.ToyScript.ToyScript>), current = 9 (push 7)
+    stack = 
+    scopes = 
+      z = <void>, x = <2>
+      <call context>

@@ -1,0 +1,74 @@
+﻿/s/c:Script/f:Fun/b/0:ret/+/arg0:*/arg0:v:a -> a
+/s/c:Script/f:Fun/b/0:ret/+/arg0:*/arg1:(2, DecimalLiteral) -> 2
+/s/c:Script/f:Fun/b/0:ret/+/arg0:* -> (* a 2)
+/s/c:Script/f:Fun/b/0:ret/+/arg1:(3, DecimalLiteral) -> 3
+/s/c:Script/f:Fun/b/0:ret/+ -> (+ (* a 2) 3)
+/s/c:Script/f:Fun/b/0:ret -> (ret (PAREXPR (+ (* a 2) 3)))
+/s/c:Script/f:Fun/b -> (BLOCK (ret (PAREXPR (+ (* a 2) 3))))
+/s/c:Script/f:Fun -> (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3)))))
+/s/c:Script/f:Main/b/0:var:z -> (var z (= x 2))
+/s/c:Script/f:Main/b/1:var:x -> (var z (= x 2))
+/s/c:Script/f:Main/b/2:=/l:v:x -> x
+/s/c:Script/f:Main/b/2:=/r:(2, DecimalLiteral) -> 2
+/s/c:Script/f:Main/b/2:= -> (= x 2)
+/s/c:Script/f:Main/b/2: -> (var z (= x 2))
+/s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg0:Fun/arg0:v:x -> x
+/s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg0:Fun -> (CALL Fun (ARGS x))
+/s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg1:(7, DecimalLiteral) -> 7
+/s/c:Script/f:Main/b/3:if/?:&&/arg0:> -> (> (CALL Fun (ARGS x)) 7)
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+/arg0:v:x -> x
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+/arg1:(1, DecimalLiteral) -> 1
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+ -> (+ x 1)
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun -> (CALL Fun (ARGS (+ x 1)))
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg1:(10, DecimalLiteral) -> 10
+/s/c:Script/f:Main/b/3:if/?:&&/arg1:< -> (< (CALL Fun (ARGS (+ x 1))) 10)
+/s/c:Script/f:Main/b/3:if/?:&& -> (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10))
+/s/c:Script/f:Main/b/3:if/1:b/0:var:y -> (var (= y (= x Datum.Input.1)))
+/s/c:Script/f:Main/b/3:if/1:b/1:=/l:v:y -> y
+/s/c:Script/f:Main/b/3:if/1:b/1:=/r:=/l:v:x -> x
+/s/c:Script/f:Main/b/3:if/1:b/1:=/r:=/r:v:Datum.Input.1 -> Datum.Input.1
+/s/c:Script/f:Main/b/3:if/1:b/1:=/r:= -> (= x Datum.Input.1)
+/s/c:Script/f:Main/b/3:if/1:b/1:= -> (= y (= x Datum.Input.1))
+/s/c:Script/f:Main/b/3:if/1:b/1: -> (var (= y (= x Datum.Input.1)))
+/s/c:Script/f:Main/b/3:if/1:b/2:=/l:v:x -> x
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg0:v:x -> x
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:*/arg0:v:y -> y
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:*/arg1:v:Datum.Repository.4 -> Datum.Repository.4
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:* -> (* y Datum.Repository.4)
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+ -> (+ x (* y Datum.Repository.4))
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg1:v:z -> z
+/s/c:Script/f:Main/b/3:if/1:b/2:=/r:+ -> (+ (+ x (* y Datum.Repository.4)) z)
+/s/c:Script/f:Main/b/3:if/1:b/2:= -> (= x (+ (+ x (* y Datum.Repository.4)) z))
+/s/c:Script/f:Main/b/3:if/1:b/2: -> (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z)))
+/s/c:Script/f:Main/b/3:if/1:b/3:=/l:v:Datum.Output.1 -> Datum.Output.1
+/s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg0:v:x -> x
+/s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:*/arg0:(2, DecimalLiteral) -> 2
+/s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:*/arg1:v:y -> y
+/s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:* -> (* 2 y)
+/s/c:Script/f:Main/b/3:if/1:b/3:=/r:- -> (- x (* 2 y))
+/s/c:Script/f:Main/b/3:if/1:b/3:= -> (= Datum.Output.1 (- x (* 2 y)))
+/s/c:Script/f:Main/b/3:if/1:b/3: -> (EXPR (= Datum.Output.1 (- x (* 2 y))))
+/s/c:Script/f:Main/b/3:if/1:b -> (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y)))))
+/s/c:Script/f:Main/b/3:if/0:b/0:var:y -> (var (= y Datum.Input.2))
+/s/c:Script/f:Main/b/3:if/0:b/1:=/l:v:y -> y
+/s/c:Script/f:Main/b/3:if/0:b/1:=/r:v:Datum.Input.2 -> Datum.Input.2
+/s/c:Script/f:Main/b/3:if/0:b/1:= -> (= y Datum.Input.2)
+/s/c:Script/f:Main/b/3:if/0:b/1: -> (var (= y Datum.Input.2))
+/s/c:Script/f:Main/b/3:if/0:b/2:=/l:v:z -> z
+/s/c:Script/f:Main/b/3:if/0:b/2:=/r:(0, DecimalLiteral) -> 0
+/s/c:Script/f:Main/b/3:if/0:b/2:= -> (= z 0)
+/s/c:Script/f:Main/b/3:if/0:b/2: -> (EXPR (= z 0))
+/s/c:Script/f:Main/b/3:if/0:b/3:=/l:v:Datum.Results.1 -> Datum.Results.1
+/s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+/arg0:v:x -> x
+/s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+/arg1:v:z -> z
+/s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+ -> (+ x z)
+/s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg1:v:y -> y
+/s/c:Script/f:Main/b/3:if/0:b/3:=/r:+ -> (+ (PAREXPR (+ x z)) y)
+/s/c:Script/f:Main/b/3:if/0:b/3:= -> (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))
+/s/c:Script/f:Main/b/3:if/0:b/3: -> (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))
+/s/c:Script/f:Main/b/3:if/0:b -> (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))
+/s/c:Script/f:Main/b/3:if -> (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))
+/s/c:Script/f:Main/b -> (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))))
+/s/c:Script/f:Main -> (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))))
+/s/c:Script -> (CLASS (DECL Script (rtimpl ToyScript)) (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3))))) (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y))))))))
+/s -> (SCRIPT (CLASS (DECL Script (rtimpl ToyScript)) (FUNC (DECL Fun (ARGS a)) (BLOCK (ret (PAREXPR (+ (* a 2) 3))))) (FUNC (DECL Main ARGS) (BLOCK (var z (= x 2)) (if (&& (> (CALL Fun (ARGS x)) 7) (< (CALL Fun (ARGS (+ x 1))) 10)) (BLOCK (var (= y (= x Datum.Input.1))) (EXPR (= x (+ (+ x (* y Datum.Repository.4)) z))) (EXPR (= Datum.Output.1 (- x (* 2 y))))) (BLOCK (var (= y Datum.Input.2)) (EXPR (= z 0)) (EXPR (= Datum.Results.1 (+ (PAREXPR (+ x z)) y)))))))))

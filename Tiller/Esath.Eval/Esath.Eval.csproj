@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61FD7548-7E75-474A-8146-943FFE4CBB13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Esath.Eval</RootNamespace>
+    <AssemblyName>Esath.Eval</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\antlr\c# runtime\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DataVault.Core, Version=3.0.544.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\datavault\DataVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ver1\EvalSession.cs" />
+    <Compile Include="Ver2\ArgsDontSuitTheFunctionException.cs" />
+    <Compile Include="Ver2\BadFormatOfSerializedStringException.cs" />
+    <Compile Include="Ver2\BaseEvalException.cs" />
+    <Compile Include="Ver2\EvalSession.cs" />
+    <Compile Include="Ver2\EvalSessionScriptHost.cs" />
+    <Compile Include="Ver2\EvalSessionScriptHostScopeResolver.cs" />
+    <Compile Include="Ver2\EvalStackOverflowException.cs" />
+    <Compile Include="Ver2\ReferencedBranchDoesNotExistException.cs" />
+    <Compile Include="Ver2\UnexpectedErrorException.cs" />
+    <Compile Include="Ver3\Async\CumulativeOperation.cs" />
+    <Compile Include="Ver3\CompilationContext.cs" />
+    <Compile Include="Ver3\Async\CumulationAwareContext.cs" />
+    <Compile Include="Ver3\Async\SynchronizationContext.cs" />
+    <Compile Include="Ver3\CompiledScenarioCache.cs" />
+    <Compile Include="Ver3\Core\RevisionAttribute.cs" />
+    <Compile Include="Ver3\Core\SeqAttribute.cs" />
+    <Compile Include="Ver3\Exceptions\ExpectedVaultCompilerException.cs" />
+    <Compile Include="Ver3\IVaultCompiler.cs" />
+    <Compile Include="Ver3\Async\MTLog.cs" />
+    <Compile Include="Ver3\Snippets\CompiledNodeCollection.cs" />
+    <Compile Include="Ver3\Snippets\CompiledPropertyCollection.cs" />
+    <Compile Include="Ver3\Snippets\CompiledScenarioExposition.cs" />
+    <Compile Include="Ver3\Async\VaultCompiler.Async.cs" />
+    <Compile Include="Ver3\VaultCompiler.cs" />
+    <Compile Include="Ver3\Core\VersionAttribute.cs" />
+    <Compile Include="Ver3\EvalSession.cs" />
+    <Compile Include="Ver3\Helpers\FromLambda.cs" />
+    <Compile Include="Ver3\Helpers\ILTrait.Converters.cs" />
+    <Compile Include="Ver3\Helpers\ILTrait.cs" />
+    <Compile Include="Ver3\Helpers\MyTrait.cs" />
+    <Compile Include="Ver3\Helpers\TypeBuilderTrait.cs" />
+    <Compile Include="Ver3\Core\ICompiledProperty.cs" />
+    <Compile Include="Ver3\Core\ICompiledScenario.cs" />
+    <Compile Include="Ver3\Core\ICompiledNode.cs" />
+    <Compile Include="Ver3\Core\VPathAttribute.cs" />
+    <Compile Include="Ver3\Core\Version.cs" />
+    <Compile Include="Ver3\Snippets\CompiledNode.cs" />
+    <Compile Include="Ver3\Snippets\CompiledProperty.cs" />
+    <Compile Include="Ver3\Snippets\CompiledScenario.cs" />
+    <Compile Include="Ver3\Helpers\ScenarioFormatUtils.cs" />
+    <Compile Include="Ver1\ArgsDontSuitTheFunctionException.cs" />
+    <Compile Include="Ver1\BadFormatOfSerializedStringException.cs" />
+    <Compile Include="Ver1\BaseEvalException.cs" />
+    <Compile Include="Ver1\EvalStackOverflowException.cs" />
+    <Compile Include="Ver1\ReferencedBranchDoesNotExistException.cs" />
+    <Compile Include="Ver1\UnexpectedErrorException.cs" />
+    <Compile Include="Ver1\VaultEval.cs" />
+    <Compile Include="Ver3\Snippets\CachedVault.cs" />
+    <Compile Include="Ver3\Snippets\NodeFactory.cs" />
+    <Compile Include="Ver3\Async\CompilerOutOfTouchException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Elf\Elf.csproj">
+      <Project>{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}</Project>
+      <Name>Elf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Esath.Data\Esath.Data.csproj">
+      <Project>{E9CF2467-9DFB-4495-8AB2-E81E44897185}</Project>
+      <Name>Esath.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Esath.Pie\Esath.Pie.csproj">
+      <Project>{B227132D-A170-48F8-A97E-D124E6CA945C}</Project>
+      <Name>Esath.Pie</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AssemblyInfo.template" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>echo Synchronize assembly revision number with SVN revision
+"$(ProjectDir)..\..\ThirdPartyStuff\tortoiseSVN\subwcrev.bat" "$(ProjectDir)." "$(ProjectDir)Properties\AssemblyInfo.template" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

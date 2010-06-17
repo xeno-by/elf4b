@@ -1,0 +1,3 @@
+﻿Acquire(Datum.Input.2) called
+Acquire(Datum.Results.1) called
+Store(Datum.Results.1, 4) called

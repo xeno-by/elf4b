@@ -1,0 +1,34 @@
+﻿/s/c:Script/f:Fun/b/ret/+/*/v:a
+/s/c:Script/f:Fun/b/ret/+/*/(2, DecimalLiteral)
+/s/c:Script/f:Fun/b/ret/+/(3, DecimalLiteral)
+/s/c:Script/f:Main/b/var:z
+/s/c:Script/f:Main/b/var:x
+/s/c:Script/f:Main/b/=/v:x
+/s/c:Script/f:Main/b/=/(2, DecimalLiteral)
+/s/c:Script/f:Main/b/if/&&/>/Fun/v:x
+/s/c:Script/f:Main/b/if/&&/>/(7, DecimalLiteral)
+/s/c:Script/f:Main/b/if/&&/</Fun/+/v:x
+/s/c:Script/f:Main/b/if/&&/</Fun/+/(1, DecimalLiteral)
+/s/c:Script/f:Main/b/if/&&/</(10, DecimalLiteral)
+/s/c:Script/f:Main/b/if/b/var:y
+/s/c:Script/f:Main/b/if/b/=/v:y
+/s/c:Script/f:Main/b/if/b/=/=/v:x
+/s/c:Script/f:Main/b/if/b/=/=/v:Datum.Input.1
+/s/c:Script/f:Main/b/if/b/=/v:x
+/s/c:Script/f:Main/b/if/b/=/+/+/v:x
+/s/c:Script/f:Main/b/if/b/=/+/+/*/v:y
+/s/c:Script/f:Main/b/if/b/=/+/+/*/v:Datum.Repository.4
+/s/c:Script/f:Main/b/if/b/=/+/v:z
+/s/c:Script/f:Main/b/if/b/=/v:Datum.Output.1
+/s/c:Script/f:Main/b/if/b/=/-/v:x
+/s/c:Script/f:Main/b/if/b/=/-/*/(2, DecimalLiteral)
+/s/c:Script/f:Main/b/if/b/=/-/*/v:y
+/s/c:Script/f:Main/b/if/b/var:y
+/s/c:Script/f:Main/b/if/b/=/v:y
+/s/c:Script/f:Main/b/if/b/=/v:Datum.Input.2
+/s/c:Script/f:Main/b/if/b/=/v:z
+/s/c:Script/f:Main/b/if/b/=/(0, DecimalLiteral)
+/s/c:Script/f:Main/b/if/b/=/v:Datum.Results.1
+/s/c:Script/f:Main/b/if/b/=/+/+/v:x
+/s/c:Script/f:Main/b/if/b/=/+/+/v:z
+/s/c:Script/f:Main/b/if/b/=/+/v:y

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elf</RootNamespace>
+    <AssemblyName>Elf</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdPartyStuff\antlr\c# runtime\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Assembler\Decl.cs" />
+    <Compile Include="Core\Assembler\Dup.cs" />
+    <Compile Include="Core\ClrIntegration\CustomInvocationResolverAttribute.cs" />
+    <Compile Include="Core\ClrIntegration\CustomScopeResolverAttribute.cs" />
+    <Compile Include="Core\ClrIntegration\ElfDiscoverableAttribute.cs" />
+    <Compile Include="Core\ClrIntegration\ElfSerializableAttribute.cs" />
+    <Compile Include="Core\ClrIntegration\RthelperAttribute.cs" />
+    <Compile Include="Core\EntryPointHelper.cs" />
+    <Compile Include="Core\Reflection\ReflectionEntity.cs" />
+    <Compile Include="Core\Runtime\Impl\DefaultEntryPoint.cs" />
+    <Compile Include="Core\Runtime\IEntryPoint.cs" />
+    <Compile Include="Core\Runtime\ThreadStatus.cs" />
+    <Compile Include="Core\ThreadExecutionHelper.cs" />
+    <Compile Include="Core\TypeSystem\ElfObjectImpl.cs" />
+    <Compile Include="Core\TypeSystem\ElfVoid.cs" />
+    <Compile Include="Core\Assembler\PopAll.cs" />
+    <Compile Include="Core\Runtime\Impl\ClrIntegration\DefaultElfObjectMarshaller.cs" />
+    <Compile Include="Core\Runtime\IElfCompiler.cs" />
+    <Compile Include="Core\Runtime\IElfObjectMarshaller.cs" />
+    <Compile Include="Core\Runtime\Impl\Loaders\ClrIntegrationLoader.cs" />
+    <Compile Include="Core\Runtime\Impl\Loaders\DefaultVmLoader.cs" />
+    <Compile Include="Core\Runtime\Contexts\ClrCallContext.cs" />
+    <Compile Include="Core\Runtime\Contexts\RuntimeContext.cs" />
+    <Compile Include="Core\Runtime\Contexts\Scope.cs" />
+    <Compile Include="Core\Runtime\Contexts\NativeCallContext.cs" />
+    <Compile Include="Core\Runtime\IVmLoader.cs" />
+    <Compile Include="Core\Runtime\Impl\DefaultElfThread.cs" />
+    <Compile Include="Core\Runtime\Impl\DefaultInvocationResolver.cs" />
+    <Compile Include="Core\Runtime\Impl\DefaultScopeResolver.cs" />
+    <Compile Include="Core\Runtime\IElfThread.cs" />
+    <Compile Include="Core\Runtime\IVmBound.cs" />
+    <Compile Include="Core\TypeSystem\ElfBoolean.cs" />
+    <Compile Include="Core\TypeSystem\ElfScriptDefinedClassInstance.cs" />
+    <Compile Include="Core\Assembler\Literals\ElfLiteral.cs" />
+    <Compile Include="Core\TypeSystem\IElfObject.cs" />
+    <Compile Include="Core\TypeSystem\ElfNumber.cs" />
+    <Compile Include="Core\TypeSystem\ElfString.cs" />
+    <Compile Include="Exceptions\Abstract\UnexpectedRtimplException.cs" />
+    <Compile Include="Exceptions\Compiler\UnexpectedCompilerException.cs" />
+    <Compile Include="Core\Assembler\Invoke.cs" />
+    <Compile Include="Core\Assembler\Label.cs" />
+    <Compile Include="Core\Assembler\PopRef.cs" />
+    <Compile Include="Core\Assembler\PushRef.cs" />
+    <Compile Include="Core\Runtime\Impl\Compiler\DefaultElfCompiler.cs" />
+    <Compile Include="Core\Assembler\ElfVmInstruction.cs" />
+    <Compile Include="Core\Assembler\Enter.cs" />
+    <Compile Include="Core\Assembler\Jt.cs" />
+    <Compile Include="Core\Assembler\Jf.cs" />
+    <Compile Include="Core\Assembler\Leave.cs" />
+    <Compile Include="Core\Assembler\Pop.cs" />
+    <Compile Include="Core\Assembler\PushVal.cs" />
+    <Compile Include="Core\Assembler\Ret.cs" />
+    <Compile Include="Core\Runtime\Impl\Loaders\ElfScriptLoader.cs" />
+    <Compile Include="Core\Assembler\Literals\ElfNumberLiteral.cs" />
+    <Compile Include="Core\Reflection\ClrMethod.cs" />
+    <Compile Include="Core\Reflection\ElfClass.cs" />
+    <Compile Include="Core\Reflection\ElfMethod.cs" />
+    <Compile Include="Core\Reflection\NativeMethod.cs" />
+    <Compile Include="Core\Runtime\IInvocationResolver.cs" />
+    <Compile Include="Core\Runtime\IScopeResolver.cs" />
+    <Compile Include="Core\Assembler\Literals\ElfStringLiteral.cs" />
+    <Compile Include="Core\VirtualMachine.cs" />
+    <Compile Include="Exceptions\ElfException.cs" />
+    <Compile Include="Exceptions\Parser\SemanticErrorException.cs" />
+    <Compile Include="Exceptions\Runtime\UnexpectedElfRuntimeException.cs" />
+    <Compile Include="Exceptions\Loader\UnexpectedLoaderException.cs" />
+    <Compile Include="Exceptions\Loader\ErroneousScriptLoaderException.cs" />
+    <Compile Include="Exceptions\ElfExceptionType.cs" />
+    <Compile Include="Exceptions\Abstract\UnexpectedElfException.cs" />
+    <Compile Include="Exceptions\Parser\RecognitionExceptionHelper.cs" />
+    <Compile Include="Exceptions\Runtime\ErroneousScriptRuntimeException.cs" />
+    <Compile Include="Exceptions\Abstract\ErroneousScriptException.cs" />
+    <Compile Include="Exceptions\Runtime\UnexpectedRtimplRuntimeException.cs" />
+    <Compile Include="Helpers\AntlrHelper.cs" />
+    <Compile Include="Helpers\ConversionsHelper.cs" />
+    <Compile Include="Helpers\EnumerableExtensions.cs" />
+    <Compile Include="Helpers\GenericsHelper.cs" />
+    <Compile Include="Helpers\LineCharIndex.cs" />
+    <Compile Include="Helpers\ReadOnlyDictionary.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Helpers\Span.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Core\ClrIntegration\RtimplAttribute.cs" />
+    <Compile Include="Exceptions\Parser\SyntaxErrorException.cs" />
+    <Compile Include="Interactive\ElfInteractive.cs" />
+    <Compile Include="Interactive\ElfInteractiveScopeResolver.cs" />
+    <Compile Include="Interactive\ElfInteractiveScript.cs" />
+    <Compile Include="Interactive\EvalResult.cs" />
+    <Compile Include="Interactive\ChangeSet.cs" />
+    <Compile Include="Interactive\PropertyBag.cs" />
+    <Compile Include="Syntax\Ast\AstNode.cs" />
+    <Compile Include="Syntax\Ast\AstNodeType.cs" />
+    <Compile Include="Syntax\Ast\Expressions\AssignmentExpression.cs" />
+    <Compile Include="Syntax\Ast\Expressions\InvocationExpression.cs" />
+    <Compile Include="Syntax\Ast\Expressions\LiteralExpression.cs" />
+    <Compile Include="Syntax\Ast\Expressions\VariableExpression.cs" />
+    <Compile Include="Syntax\Ast\Statements\Block.cs" />
+    <Compile Include="Syntax\Ast\Defs\ClassDef.cs" />
+    <Compile Include="Syntax\Ast\Defs\FuncDef.cs" />
+    <Compile Include="Syntax\Ast\Defs\Script.cs" />
+    <Compile Include="Syntax\Ast\Statements\EmptyStatement.cs" />
+    <Compile Include="Syntax\Ast\Expressions\Expression.cs" />
+    <Compile Include="Syntax\Ast\Statements\ExpressionStatement.cs" />
+    <Compile Include="Syntax\Ast\Statements\IfStatement.cs" />
+    <Compile Include="Syntax\Ast\Statements\ReturnStatement.cs" />
+    <Compile Include="Syntax\Ast\Statements\Statement.cs" />
+    <Compile Include="Syntax\Ast\Statements\VarStatement.cs" />
+    <Compile Include="Syntax\AstBuilders\ElfAstBuilder.cs" />
+    <Compile Include="Exceptions\Parser\UnexpectedParserException.cs" />
+    <Compile Include="Syntax\Grammar\ElfLexer.cs" />
+    <Compile Include="Syntax\Grammar\ElfParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntax\Light\LightSyntaxHelper.cs" />
+    <Compile Include="Syntax\Light\LightSyntaxHost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AssemblyInfo.template" />
+    <None Include="Syntax\Grammar\Elf.g" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>echo Synchronize assembly revision number with SVN revision
+"$(ProjectDir)..\ThirdPartyStuff\tortoiseSVN\subwcrev.bat" "$(ProjectDir)." "$(ProjectDir)Properties\AssemblyInfo.template" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

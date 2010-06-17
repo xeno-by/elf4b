@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39659887-03F2-4362-97AD-9BC30225E8BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Browser</RootNamespace>
+    <AssemblyName>armosto</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Browser.StartUp</StartupObject>
+    <TargetFrameworkSubset>Full</TargetFrameworkSubset>
+    <ApplicationIcon>house.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VAULT_EVAL_2,USE_TDISK,EDITION_LIGHT1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>VAULT_EVAL_2,EDITION_LIGHT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\antlr\c# runtime\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\htmleditor\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="DataVault.Core, Version=3.0.544.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\datavault\DataVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DataVault.UI, Version=3.0.544.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\datavault\DataVault.UI.exe</HintPath>
+    </Reference>
+    <Reference Include="HTMLEditorControl, Version=1.0.3336.15939, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\htmleditor\HTMLEditorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\htmleditor\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectMeet.Appearance.TabMeet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\objectmeet\ObjectMeet.Appearance.TabMeet.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph, Version=3.1.40104.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyStuff\quickgraph\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gui\AppraisalControl.cs">
+    </Compile>
+    <Compile Include="Gui\AppraisalControl.Designer.cs">
+      <DependentUpon>AppraisalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\BrowserMode.cs" />
+    <Compile Include="Gui\ConditionDeclaration.cs" />
+    <Compile Include="Gui\DataVault.UI\Commands\RichTextBoxWithHiddenCaret.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\DataVault.UI\Commands\Table.cs" />
+    <Compile Include="Gui\DataVault.UI\Commands\TableHelper.cs" />
+    <Compile Include="Gui\DataVault.UI\Commands\TableImportFinishCommand.cs" />
+    <Compile Include="Gui\DataVault.UI\Commands\TableImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DataVault.UI\Commands\TableImportForm.Designer.cs">
+      <DependentUpon>TableImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DataVault.UI\Commands\TableImportStartCommand.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\BooleanContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\CurrencyContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\DateTimeContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\NumericContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\PercentContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\ContentTypez\StringContentType.cs" />
+    <Compile Include="Gui\DataVault.UI\EsathDataVaultUIExtension.cs" />
+    <Compile Include="Gui\Dialog\GenerationInProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\GenerationInProgressWindow.Designer.cs">
+      <DependentUpon>GenerationInProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Dialog\ProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\ProgressWindow.Designer.cs">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Dialog\GenerateReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\GenerateReportDialog.Designer.cs">
+      <DependentUpon>GenerateReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Dialog\ScenarioPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\ScenarioPropertiesDialog.Designer.cs">
+      <DependentUpon>ScenarioPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Dialog\WaitWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\WaitWindow.Designer.cs">
+      <DependentUpon>WaitWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueDateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueDateEditor.Designer.cs">
+      <DependentUpon>SourceValueDateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueEditorBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueEditorBase.Designer.cs">
+      <DependentUpon>SourceValueEditorBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueNumericEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueNumericEditor.Designer.cs">
+      <DependentUpon>SourceValueNumericEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValuePropertyEditor.cs" />
+    <Compile Include="Gui\Editor\SourceValueStringEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueStringEditor.Designer.cs">
+      <DependentUpon>SourceValueStringEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueTextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueTextEditor.Designer.cs">
+      <DependentUpon>SourceValueTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\FormulaDeclaration.cs" />
+    <Compile Include="Gui\Editor\FormulaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\FormulaEditor.Designer.cs">
+      <DependentUpon>FormulaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\RepositoryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\RepositoryEditor.Designer.cs">
+      <DependentUpon>RepositoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ScenarioDepot.cs" />
+    <Compile Include="Gui\ScenarionBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ScenarionBrowser.Designer.cs">
+      <DependentUpon>ScenarionBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ScenarioNodeType.cs" />
+    <Compile Include="Gui\Scenarion.Tabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SplashForm.designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Util\BooleanToYesNoTypeConverter.cs" />
+    <Compile Include="Gui\Dialog\InsertFieldWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\InsertFieldWizard.Designer.cs">
+      <DependentUpon>InsertFieldWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Dialog\PromptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialog\PromptDialog.Designer.cs">
+      <DependentUpon>PromptDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueDeclarationEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\SourceValueDeclarationEditor.Designer.cs">
+      <DependentUpon>SourceValueDeclarationEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Interactor.cs" />
+    <Compile Include="Gui\Scenarion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Scenarion.Designer.cs">
+      <DependentUpon>Scenarion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ScenarioNode.cs" />
+    <Compile Include="Gui\SourceValueDeclaration.cs" />
+    <Compile Include="Gui\Util\EnumTypeConverter.cs" />
+    <Compile Include="Gui\Util\IHTMLElement.cs" />
+    <Compile Include="Gui\Util\IHTMLTableRow.cs" />
+    <Compile Include="Gui\Util\TempHtmlFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Levelage.cs" />
+    <Compile Include="StartUp.cs" />
+    <Compile Include="Wordum\Wordum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\AppraisalControl.resx">
+      <DependentUpon>AppraisalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DataVault.UI\Commands\TableImportForm.resx">
+      <DependentUpon>TableImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DataVault.UI\Commands\TableImportForm.ru-RU.resx">
+      <DependentUpon>TableImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\GenerationInProgressWindow.resx">
+      <DependentUpon>GenerationInProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\ProgressWindow.resx">
+      <DependentUpon>ProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\GenerateReportDialog.resx">
+      <DependentUpon>GenerateReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\InsertFieldWizard.resx">
+      <DependentUpon>InsertFieldWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\PromptDialog.resx">
+      <DependentUpon>PromptDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\ScenarioPropertiesDialog.resx">
+      <DependentUpon>ScenarioPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialog\WaitWindow.resx">
+      <DependentUpon>WaitWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueDateEditor.resx">
+      <DependentUpon>SourceValueDateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueDeclarationEditor.resx">
+      <DependentUpon>SourceValueDeclarationEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\FormulaEditor.resx">
+      <DependentUpon>FormulaEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueEditorBase.resx">
+      <DependentUpon>SourceValueEditorBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueNumericEditor.resx">
+      <DependentUpon>SourceValueNumericEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueStringEditor.resx">
+      <DependentUpon>SourceValueStringEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\SourceValueTextEditor.resx">
+      <DependentUpon>SourceValueTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\RepositoryEditor.resx">
+      <DependentUpon>RepositoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\RepositoryEditor.ru-RU.resx">
+      <DependentUpon>RepositoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Scenarion.resx">
+      <DependentUpon>Scenarion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ScenarionBrowser.resx">
+      <DependentUpon>ScenarionBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Browser.Properties</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="house.ico" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\111.png" />
+    <None Include="Resources\50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Elf\Elf.csproj">
+      <Project>{EB119E26-BD8F-436D-9A72-6F5B702FEBCD}</Project>
+      <Name>Elf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Esath.Data\Esath.Data.csproj">
+      <Project>{E9CF2467-9DFB-4495-8AB2-E81E44897185}</Project>
+      <Name>Esath.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Esath.Eval\Esath.Eval.csproj">
+      <Project>{61FD7548-7E75-474A-8146-943FFE4CBB13}</Project>
+      <Name>Esath.Eval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Esath.Pie\Esath.Pie.csproj">
+      <Project>{B227132D-A170-48F8-A97E-D124E6CA945C}</Project>
+      <Name>Esath.Pie</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

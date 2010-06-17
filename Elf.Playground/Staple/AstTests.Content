@@ -1,0 +1,23 @@
+﻿def Script rtimpl ToyScript
+  def Fun(a)
+    ret +(*(a, 2), 3)
+  end
+
+  def Main()
+    var z
+    var x
+    x = 2
+
+    if &&(>(Fun(x), 7), <(Fun(+(x, 1)), 10)) then
+      var y
+      y = x = Datum.Input.1
+      x = +(+(x, *(y, Datum.Repository.4)), z)
+      Datum.Output.1 = -(x, *(2, y))
+    else
+      var y
+      y = Datum.Input.2
+      z = 0
+      Datum.Results.1 = +(+(x, z), y)
+    end
+  end
+end

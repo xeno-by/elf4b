@@ -1,0 +1,22 @@
+def Script rtimpl ToyScript
+  /* multi-line comment
+  def Acquire (url) rtimpl
+  def Store (what, url) rtimpl
+
+  */ def Fun (a)
+    ret (a * 2 + 3)
+  end
+
+  def Main ()
+    var z, x = 2
+    if Fun(x) > 7 && Fun(x + 1) < 10 then
+      var y = x = Datum.Input.1 // and another comment
+      x = x + y * Datum.Repository.4 + z
+      Datum.Output.1 = x - 2 * y
+    else
+      var y = Datum.Input.2
+      z = 0 // this line is necessary or we face a UsingVoidValue exception
+      Datum.Results.1 = (x + z) + y
+    end
+  end
+end

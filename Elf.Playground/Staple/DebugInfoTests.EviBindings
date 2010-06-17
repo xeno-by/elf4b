@@ -1,0 +1,70 @@
+﻿enter -> /s/c:Script/f:Main/b
+decl z -> /s/c:Script/f:Main/b/0:var:z
+decl x -> /s/c:Script/f:Main/b/1:var:x
+push 2 -> /s/c:Script/f:Main/b/2:=/r:(2, DecimalLiteral)
+dup -> /s/c:Script/f:Main/b/2:=
+pop x -> /s/c:Script/f:Main/b/2:=
+pop -> /s/c:Script/f:Main/b/2:
+push x -> /s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg0:Fun/arg0:v:x
+invoke1 Fun -> /s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg0:Fun
+push 7 -> /s/c:Script/f:Main/b/3:if/?:&&/arg0:>/arg1:(7, DecimalLiteral)
+invoke2 > -> /s/c:Script/f:Main/b/3:if/?:&&/arg0:>
+push x -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+/arg0:v:x
+push 1 -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+/arg1:(1, DecimalLiteral)
+invoke2 + -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun/arg0:+
+invoke1 Fun -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg0:Fun
+push 10 -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:</arg1:(10, DecimalLiteral)
+invoke2 < -> /s/c:Script/f:Main/b/3:if/?:&&/arg1:<
+invoke2 && -> /s/c:Script/f:Main/b/3:if/?:&&
+jf if0f -> /s/c:Script/f:Main/b/3:if
+label if0t -> /s/c:Script/f:Main/b/3:if
+enter -> /s/c:Script/f:Main/b/3:if/1:b
+decl y -> /s/c:Script/f:Main/b/3:if/1:b/0:var:y
+push Datum.Input.1 -> /s/c:Script/f:Main/b/3:if/1:b/1:=/r:=/r:v:Datum.Input.1
+dup -> /s/c:Script/f:Main/b/3:if/1:b/1:=/r:=
+pop x -> /s/c:Script/f:Main/b/3:if/1:b/1:=/r:=
+dup -> /s/c:Script/f:Main/b/3:if/1:b/1:=
+pop y -> /s/c:Script/f:Main/b/3:if/1:b/1:=
+pop -> /s/c:Script/f:Main/b/3:if/1:b/1:
+push x -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg0:v:x
+push y -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:*/arg0:v:y
+push Datum.Repository.4 -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:*/arg1:v:Datum.Repository.4
+invoke2 * -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+/arg1:*
+invoke2 + -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg0:+
+push z -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+/arg1:v:z
+invoke2 + -> /s/c:Script/f:Main/b/3:if/1:b/2:=/r:+
+dup -> /s/c:Script/f:Main/b/3:if/1:b/2:=
+pop x -> /s/c:Script/f:Main/b/3:if/1:b/2:=
+pop -> /s/c:Script/f:Main/b/3:if/1:b/2:
+push x -> /s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg0:v:x
+push 2 -> /s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:*/arg0:(2, DecimalLiteral)
+push y -> /s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:*/arg1:v:y
+invoke2 * -> /s/c:Script/f:Main/b/3:if/1:b/3:=/r:-/arg1:*
+invoke2 - -> /s/c:Script/f:Main/b/3:if/1:b/3:=/r:-
+dup -> /s/c:Script/f:Main/b/3:if/1:b/3:=
+pop Datum.Output.1 -> /s/c:Script/f:Main/b/3:if/1:b/3:=
+pop -> /s/c:Script/f:Main/b/3:if/1:b/3:
+leave -> /s/c:Script/f:Main/b/3:if/1:b
+label if0f -> /s/c:Script/f:Main/b/3:if
+enter -> /s/c:Script/f:Main/b/3:if/0:b
+decl y -> /s/c:Script/f:Main/b/3:if/0:b/0:var:y
+push Datum.Input.2 -> /s/c:Script/f:Main/b/3:if/0:b/1:=/r:v:Datum.Input.2
+dup -> /s/c:Script/f:Main/b/3:if/0:b/1:=
+pop y -> /s/c:Script/f:Main/b/3:if/0:b/1:=
+pop -> /s/c:Script/f:Main/b/3:if/0:b/1:
+push 0 -> /s/c:Script/f:Main/b/3:if/0:b/2:=/r:(0, DecimalLiteral)
+dup -> /s/c:Script/f:Main/b/3:if/0:b/2:=
+pop z -> /s/c:Script/f:Main/b/3:if/0:b/2:=
+pop -> /s/c:Script/f:Main/b/3:if/0:b/2:
+push x -> /s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+/arg0:v:x
+push z -> /s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+/arg1:v:z
+invoke2 + -> /s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg0:+
+push y -> /s/c:Script/f:Main/b/3:if/0:b/3:=/r:+/arg1:v:y
+invoke2 + -> /s/c:Script/f:Main/b/3:if/0:b/3:=/r:+
+dup -> /s/c:Script/f:Main/b/3:if/0:b/3:=
+pop Datum.Results.1 -> /s/c:Script/f:Main/b/3:if/0:b/3:=
+pop -> /s/c:Script/f:Main/b/3:if/0:b/3:
+leave -> /s/c:Script/f:Main/b/3:if/0:b
+leave -> /s/c:Script/f:Main/b
+popa -> /s/c:Script/f:Main
+ret -> /s/c:Script/f:Main

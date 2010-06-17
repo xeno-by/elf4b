@@ -1,0 +1,16 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Elf.Core.ClrIntegration;
+
+[assembly: AssemblyTitle("Elf.Cola")]
+[assembly: AssemblyProduct("Elf")]
+[assembly: AssemblyCopyright("Copyright © 2008-2010 ObjectMeet")]
+
+[assembly: ComVisible(false)]
+[assembly: InternalsVisibleTo("Elf.Playground")]
+[assembly: ElfDiscoverable]
+
+[assembly: Guid("36d3313d-7b0f-4698-a579-ef44070256ca")]
+[assembly: AssemblyVersion("1.0.$WCREV$.0")]
+[assembly: AssemblyFileVersion("1.0.$WCREV$.0")]

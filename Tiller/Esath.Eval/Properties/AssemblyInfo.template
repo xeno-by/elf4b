@@ -1,0 +1,16 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Elf.Core.ClrIntegration;
+
+[assembly: AssemblyTitle("Esath.Eval")]
+[assembly: AssemblyProduct("Browser")]
+[assembly: AssemblyCopyright("Copyright © 2008-2010 БелНИЦзем")]
+
+[assembly: ComVisible(false)]
+[assembly: InternalsVisibleTo("Esath.Playground")]
+[assembly: ElfDiscoverable]
+
+[assembly: Guid("d25ccdd0-2be2-4757-b7d6-d5cf7aa5ddf5")]
+[assembly: AssemblyVersion("1.0.$WCREV$.0")]
+[assembly: AssemblyFileVersion("1.0.$WCREV$.0")]
