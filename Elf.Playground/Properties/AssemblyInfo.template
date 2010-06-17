@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Elf.Core.ClrIntegration;
-using Elf.Properties;
+using Elf.Playground.Properties;
 
 [assembly: AssemblyProduct("Elf")]
 [assembly: AssemblyTitle("Elf.Playground (" +
