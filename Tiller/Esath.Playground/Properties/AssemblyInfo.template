@@ -13,7 +13,7 @@ using Esath.Playground.Properties;
 [assembly: AssemblyCopyright("Copyright © 2008-2010 БелНИЦзем")]
 
 [assembly: ComVisible(false)]
-[assembly: InternalsVisibleTo("Esath.Playground")]
+// [assembly: InternalsVisibleTo("")]
 [assembly: ElfDiscoverable]
 
 [assembly: Guid("d25ccdd0-2be2-3598-a5ab-d5cf7aa5ddf5")]
